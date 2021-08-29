@@ -33,7 +33,7 @@ const crudMethods = [
   {
     name: 'get',
     params: '',
-    content: [`const <results> = await <repo.name>.find({})`, `return <results>`]
+    content: [`const <results> = await <repo.name>.get({})`, `return <results>`]
   },
   {
     name: 'create',
@@ -43,17 +43,17 @@ const crudMethods = [
   {
     name: 'find',
     params: 'id',
-    content: [`this.checkValidId(id)`, `const <result> = await <repo.name>.find(id)`, `return <result>`]
+    content: [`await this.checkValidId(id)`, `const <result> = await <repo.name>.find(id)`, `return <result>`]
   },
   {
     name: 'update',
     params: 'id, data',
-    content: [`this.checkValidId(id)`, `const <result> = await <repo.name>.update(id, data)`, `return <result>`]
+    content: [`await this.checkValidId(id)`, `const <result> = await <repo.name>.update(id, data)`, `return <result>`]
   },
   {
     name: 'remove',
     params: 'id',
-    content: [`this.checkValidId(id)`, `const <result> = await <repo.name>.delete(id)`, `return <result>`]
+    content: [`await this.checkValidId(id)`, `const <result> = await <repo.name>.delete(id)`, `return <result>`]
   }
 ]
 

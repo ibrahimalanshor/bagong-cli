@@ -31,7 +31,7 @@ const crudMethods = [
     content: [`const <result> = await <service>.create(req.body)`, `return collection(res, { status: 201, data: <result> })`]
   },
   {
-    name: 'show',
+    name: 'find',
     content: [`const <result> = await <service>.find(req.params.id)`, `return collection(res, <result>)`]
   },
   {

@@ -10,5 +10,5 @@ module.exports = async (folder, name) => {
   await createRequest(path.resolve(root, 'create.request.js'))
   await createRequest(path.resolve(root, 'update.request.js'))
 
-  await fs.writeFile(path.resolve(root, 'index.js'), `module.exports = [\n\tcreate: require('./create.request'),\n\tupdate: require('./update.request')\n]`)
+  await fs.writeFile(path.resolve(root, 'index.js'), `module.exports = {\n\tcreate: require('./create.request'),\n\tupdate: require('./update.request')\n}`)
 }
