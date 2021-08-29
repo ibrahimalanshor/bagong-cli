@@ -1,11 +1,11 @@
 {
   "name": "bagong-cli",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "index.js",
   "bin": {
     "bagong": "bin/bagong.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "commander": "^8.1.0",
     "fs-extra": "^10.0.0",
     "pluralize": "^8.0.0",
